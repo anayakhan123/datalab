@@ -47,7 +47,7 @@ services:
       dockerfile: .docker/mongo_dockerfile
     volumes:
       - ./logs:/var/logs/mongod
-      - /data/db:/data/db
+      - /Users/anayakhan/Desktop/Clement/dataLab/data/db:/data/db
     restart: unless-stopped
     networks:
       - backend
