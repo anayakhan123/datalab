@@ -16,8 +16,8 @@ services:
       - VUE_APP_EDITABLE_INVENTORY
       - VUE_APP_WEBSITE_TITLE
       - VUE_APP_QR_CODE_RESOLVER_URL
-    ports:
-      - "8081:8081"
+    #ports:
+    #  - "27017:27017"
 
   api:
     profiles: ["prod"]
@@ -49,6 +49,8 @@ services:
       - ./logs:/var/logs/mongod
       - /Users/anayakhan/Desktop/Clement/dataLab/data/db:/data/db
     restart: unless-stopped
+    ports:
+      - "27017:27017"
     networks:
       - backend
 

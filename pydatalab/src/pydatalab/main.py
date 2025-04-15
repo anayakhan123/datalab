@@ -213,6 +213,7 @@ def create_app(
         """
         from pydatalab.routes import OAUTH_PROXIES
 
+
         connected = True
         try:
             pydatalab.mongo.check_mongo_connection()
@@ -299,6 +300,7 @@ def create_app(
             logout_string = ""
             welcome_string = ""
 
+        print("Made to the return statement")
         return f"""<head>
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
             </head>
